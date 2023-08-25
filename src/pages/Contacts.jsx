@@ -7,7 +7,7 @@ import { removeContact } from "../Redux/action"
 import png from '../assets/download.png'
 import './contact.css';
 
-const Contacts = () => {
+const Contacts = (props) => {
 
     const [isOpen, setIsOpen] = useState(false)
     const [singleContact, setSingleContact] = useState({})
@@ -55,7 +55,8 @@ const Contacts = () => {
 
                 {
                     AllContacts.map((el) => {
-                        return <div key={el.id} className="bg-blue-950 rounded-lg shadow-md m-4 p-4 text-white">
+                        return <div key={el.id} className={`rounded-lg shadow-md m-4 p-4 ${props.mode === 'dark' ? 'bg-dark text-white' : 'bg-light text-black'}`}>
+                          
                             <div onClick={() => togglePopup(el)} className="w-3/4 m-auto  ">
                                 <img className="w-full rounded-full" src={png} alt="" />
                                 <div className="p-4">
@@ -63,8 +64,8 @@ const Contacts = () => {
                                         <Popup close={() => togglePopup(data)} el={singleContact} />
 
                                     }
-                                </div> 
-                                   <div className="text-left font-bold">
+                                </div>
+                                   <div className={`text-left font-bold z-2 ${ props.mode ==='dark' ? 'color-white' : 'dark'}`}>
                                     <p>First Name : {el.first_name}</p>
                                     <p>Last Name  : {el.last_name}</p>
                                     {/* <p>Email   : {el.email}</p> */}

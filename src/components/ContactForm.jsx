@@ -40,7 +40,7 @@ function ContactForm(props) {
     return (
         <div className="w-1/2 mx-auto my-4 pt-16">
             <h2 className="heading rounded-md bg- text-2xl font-bold mb-4">Create Contact</h2>
-            <div className="mb-4 mt-4">
+            <div className="mb-4 mt-4" >
                 <label className="FormN block font-bold mb-2" htmlFor="first-name">
                     First Name
                 </label>
@@ -51,10 +51,11 @@ function ContactForm(props) {
                     name="first_name"
                     value={form.first_name}
                     onChange={handleChange}
+                    style={{color: props.mode === '#042743'? 'white' : 'black'}}
                     />
             </div>
-            <div className="mb-4">
-                <label className="FormN block font-bold mb-2" htmlFor="last-name">
+            <div className="mb-4" >
+                <label className="FormN block font-bold mb-2" htmlFor="last-name" >
                     Last Name
                 </label>
                 <input
@@ -64,6 +65,7 @@ function ContactForm(props) {
                     name="last_name"
                     value={form.last_name}
                     onChange={handleChange}
+                    style={{color: props.mode === '#042743'? 'white' : 'black'}}
                      />
             </div>
             <div className="mb-4">
@@ -77,6 +79,7 @@ function ContactForm(props) {
                     name="email"
                     value={form.email}
                     onChange={handleChange}
+                    style={{color: props.mode === '#042743'? 'white' : 'black'}}
                 />
             </div>
             <div className="mb-4">
@@ -92,6 +95,7 @@ function ContactForm(props) {
                     max='10'
                     value={form.mob}
                     onChange={handleChange}
+                    style={{color: props.mode === '#042743'? 'white' : 'black'}}
                 />
             </div>
             <div className="mb-4">
@@ -104,6 +108,7 @@ function ContactForm(props) {
                     name="status"
                     value={form.status}
                     onChange={handleChange}
+                    style={{color: props.mode === '#042743'? 'white' : 'black'}}
                 >
                     <option value={'active'}>Active</option>
                     <option value={"inactive"}>Inactive</option>

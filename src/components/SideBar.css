@@ -19,3 +19,37 @@
         padding: 0;
     }
   }  
+
+  /* Dark Theme */
+/* .dark {
+  background-color: #042743;
+  color: #ffffff;
+} */
+
+/* Light Theme */
+/* .light {
+  background-color: #ffffff;
+  color: #000000;
+} */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+
+.theme-toggle-button {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 1.5rem;
+  color: #666;
+  margin-right: 0.5rem;
+}
+
+.theme-toggle-label {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #666;
+}
