@@ -2,7 +2,7 @@
 This is a contact management app built using ReactJS, JavaScript, TailwindCSS, React Router v6, and Redux. The app includes a dashboard with charts and maps that display COVID-19 data for different countries.
 
 # Deployed Link : -
-https://contact-management-app-teal.vercel.app/
+http://project.shivaniyadav.online:3000/
 
 # Pages and Functionality
 The app has two main pages:
